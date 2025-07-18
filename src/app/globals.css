@@ -3,24 +3,59 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* 🎨 Light Theme Colors */
+  --primary: #4f46e5;      /* Indigo */
+  --secondary: #22c55e;    /* Green */
+  --accent: #f59e0b;       /* Amber */
+  --danger: #ef4444;       /* Red */
+  --muted: #9ca3af;        /* Gray */
+
+  /* 🔠 Fonts */
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* 📱 Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-danger: var(--danger);
+  --color-muted: var(--muted);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --breakpoint-sm: var(--breakpoint-sm);
+  --breakpoint-md: var(--breakpoint-md);
+  --breakpoint-lg: var(--breakpoint-lg);
+  --breakpoint-xl: var(--breakpoint-xl);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --primary: #6366f1;
+    --secondary: #4ade80;
+    --accent: #fbbf24;
+    --danger: #f87171;
+    --muted: #6b7280;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
+
